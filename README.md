@@ -61,9 +61,10 @@ aug_show(img.copy(), albu.OpticalDistortion(distort_limit=0.25, shift_limit=0.25
 **参数设置** 
 
 - `det_des_method` 为 `['sift', 'surf', 'orb', 'brief'] 中任意一个
-
 - `matcher` 为 [bf, flann] 中任意一个
 - `ratio`  挑选good matches 的比率，挑选原则是 `m.distance < ratio * n.distance`，其中`m`是最临近的`match point`, `n`是次临近的`match point`。如果最终`good matches`的点比较少，可以适当调大`ratio`
+
+> 注意： flann 只适用于 sift 和 surf
 
 ## 运行截图
 
