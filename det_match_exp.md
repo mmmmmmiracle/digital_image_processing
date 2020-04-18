@@ -13,7 +13,7 @@
 实验数据为 `mnist` 数据集， 并将其重新调整大小 `256*256`。
 
 - `detectors and descriptors : SIFT, SURF, ORB, STAR + BRIEF`
-- `matching methods: BRUTE-FORCE, FLANN(Fast Library for Approximate Nearest Neightbors)`
+- `matchers: BRUTE-FORCE, FLANN(Fast Library for Approximate Nearest Neightbors)`
 
 |              | BRUTE-FORCE |  FLANN  |
 | :----------: | :---------: | :-----: |
@@ -110,3 +110,28 @@
 
 `MNIST`    : [MNIST](https://www.kesci.com/home/dataset/58a7c84c803d1a0d2e26441a/files)
 
+## 4. References
+
+### OPENCV DOC
+
+[Feature Detection and Description](https://docs.opencv.org/3.4/db/d27/tutorial_py_table_of_contents_feature2d.html)
+
+[Feature Matching](https://docs.opencv.org/3.4/dc/dc3/tutorial_py_matcher.html)
+
+[Feature Matching + Homography to find Objects](https://docs.opencv.org/3.4/d1/de0/tutorial_py_feature_homography.html)
+
+### BLOG
+
+[SIFT图像匹配技术详细指南](https://www.toutiao.com/a6761245533257335308/?tt_from=copy_link&utm_campaign=client_share&timestamp=1580023344&app=news_article&utm_source=copy_link&utm_medium=toutiao_ios&req_id=202001261522240101310751954C145EE9&group_id=6761245533257335308)
+
+[Python进行SIFT图像对准](https://www.jianshu.com/p/f1b97dacc501)
+
+[特征点检测：Harris, SIFT, SURF, ORB](https://zhuanlan.zhihu.com/p/36382429)
+
+[图像配准算法大总结](https://blog.csdn.net/gaoyu1253401563/article/details/80631601)
+
+### PAPER
+
+[SIFT](./papers/sift.pdf)
+
+[SURF](./papers/surf.pdf)

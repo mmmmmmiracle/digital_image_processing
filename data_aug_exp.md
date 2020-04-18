@@ -2,6 +2,8 @@
 
 ***工具包：[albumentations](https://github.com/albumentations-team/albumentations#documentation)***
 
+***[博客地址](https://www.cnblogs.com/54hys/p/12694084.html)***
+
 <a id = 'top'></a>
 
 ## CONTENT
@@ -527,3 +529,11 @@ aug_show(img, albu.RandomResizedCrop(height=240, width=320, scale=(0.3, 1.0), ra
 ![](https://img2020.cnblogs.com/blog/1564250/202004/1564250-20200416220148873-1382587554.png)
 
 [回到顶部](#top)
+
+
+
+## References
+
+[1] A. Buslaev, V. I. Iglovikov, E. Khvedchenya, A. Parinov, M. Druzhinin, A. A. Kalinin, Albumentations:
+Fast and flexible image augmentations, Information 11 (2020). URL: https:
+//www.mdpi.com/2078-2489/11/2/125. doi:10.3390/info11020125.
