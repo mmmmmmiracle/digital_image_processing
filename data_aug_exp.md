@@ -9,42 +9,53 @@
 ## CONTENT
 
 
-|                      data augmentations                      |                 link                  |                         description                          |
-| :----------------------------------------------------------: | :-----------------------------------: | :----------------------------------------------------------: |
-| [CenterCrop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.CenterCrop) |        [查看结果](#CenterCrop)        |                           中心剪裁                           |
-| [Crop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Crop) |           [查看结果](#Crop)           |                         指定位置剪裁                         |
-| [CropNonEmptyMaskIfExists](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.CropNonEmptyMaskIfExists) | [查看结果](#CropNonEmptyMaskIfExists) |      如果掩码为非空，则使用掩码裁剪区域，否则随机裁剪。      |
-| [ElasticTransform](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.ElasticTransform) |     [查看结果](#ElasticTransform)     | [Best Practices for Convolutional Neural Networks applied to Visual Document](https://dl.acm.org/doi/10.5555/938980.939477) |
-| [Flip](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Flip) |           [查看结果](#Flip)           |                  水平，垂直或水平和垂直翻转                  |
-| [GridDistortion](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.GridDistortion) |      [查看结果](#GridDistortion)      | albumentations 中主要提供了三种非刚体变换方法：ElasticTransform、GridDistortion 和 OpticalDistortion。 |
-| [GridDropout](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.GridDropout) |       [查看结果](#GridDropout)        |                 以网格方式删除图像的矩形区域                 |
-| [HorizontalFlip](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.HorizontalFlip) |      [查看结果](#HorizontalFlip)      |                           水平翻转                           |
-| [IAAAffine](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAAffine) |        [查看结果](#IAAAffine)         | 在输入上放置规则的点网格，并通过仿射变换在这些点的附近随机移动 |
-| [IAACropAndPad](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAACropAndPad) |      [查看结果](#IAACropAndPad)       |                          剪裁和填充                          |
-| [IAAFliplr](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAFliplr) |        [查看结果](#IAAFliplr)         |                           左右翻转                           |
-| [IAAFlipud](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAFlipud) |        [查看结果](#IAAFlipud)         |                           上下翻转                           |
-| [IAAPerspective](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAPerspective) |      [查看结果](#IAAPerspective)      |                  对输入执行随机四点透视变换                  |
-| [IAAPiecewiseAffine](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAPiecewiseAffine) |    [查看结果](#IAAPiecewiseAffine)    | 在输入端放置一个规则的点网格，并通过仿射变换随机移动这些点的邻域 |
-| [Lambda](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Lambda) |          [查看结果](#Lambda)          |                      用户自定义图像增强                      |
-| [LongestMaxSize](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.LongestMaxSize) |      [查看结果](#LongestMaxSize)      | 如果图像最长边小于max_size, 将最长变为max_size, 并保留长宽比resize |
-| [MaskDropout](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.MaskDropout) |       [查看结果](#MaskDropout)        |                                                              |
-| [OpticalDistortion](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.OpticalDistortion) |    [查看结果](#OpticalDistortion)     |                             畸变                             |
-| [PadIfNeeded](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.PadIfNeeded) |       [查看结果](#PadIfNeeded)        |                           判断填充                           |
-| [RandomCrop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomCrop) |        [查看结果](#RandomCrop)        |                           随机剪裁                           |
-| [RandomCropNearBBox](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomCropNearBBox) |    [查看结果](#RandomCropNearBBox)    |                                                              |
-| [RandomGridShuffle](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomGridShuffle) |    [查看结果](#RandomGridShuffle)     |                         网格打乱图像                         |
-| [RandomResizedCrop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomResizedCrop) |    [查看结果](#RandomResizedCrop)     |                         剪裁并resize                         |
-| [RandomRotate90](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomRotate90) |      [查看结果](#RandomRotate90)      |                         随机旋转90度                         |
-| [RandomScale](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomScale) |       [查看结果](#RandomScale)        |                         随机尺度变换                         |
-| [RandomSizedBBoxSafeCrop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomSizedBBoxSafeCrop) | [查看结果](#RandomSizedBBoxSafeCrop)  |                                                              |
-| [RandomSizedCrop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomSizedCrop) |     [查看结果](#RandomSizedCrop)      |                           随机剪裁                           |
-| [Resize](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Resize) |          [查看结果](#Resize)          |                       重新调整图像大小                       |
-| [Rotate](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Rotate) |          [查看结果](#Rotate)          |                             旋转                             |
-| [ShiftScaleRotate](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.ShiftScaleRotate) |     [查看结果](#ShiftScaleRotate)     |                     平移、尺度加旋转变换                     |
-| [SmallestMaxSize](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.SmallestMaxSize) |     [查看结果](#SmallestMaxSize)      |               将短边变为maxsize， 并保持长宽比               |
-| [Transpose](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Transpose) |        [查看结果](#Transpose)         |                             转置                             |
-| [VerticalFlip](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.VerticalFlip) |       [查看结果](#VerticalFlip)       |                           垂直翻转                           |
-|                                                              |                                       |                                                              |
+|                      data augmentations                      |                   link                   |                         description                          |
+| :----------------------------------------------------------: | :--------------------------------------: | :----------------------------------------------------------: |
+| [CenterCrop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.CenterCrop) |         [查看结果](#CenterCrop)          |                           中心剪裁                           |
+| [Crop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Crop) |            [查看结果](#Crop)             |                         指定位置剪裁                         |
+| [CropNonEmptyMaskIfExists](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.CropNonEmptyMaskIfExists) |  [查看结果](#CropNonEmptyMaskIfExists)   |      如果掩码为非空，则使用掩码裁剪区域，否则随机裁剪。      |
+| [ElasticTransform](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.ElasticTransform) |      [查看结果](#ElasticTransform)       | [Best Practices for Convolutional Neural Networks applied to Visual Document](https://dl.acm.org/doi/10.5555/938980.939477) |
+| [Flip](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Flip) |            [查看结果](#Flip)             |                  水平，垂直或水平和垂直翻转                  |
+| [GridDistortion](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.GridDistortion) |       [查看结果](#GridDistortion)        | albumentations 中主要提供了三种非刚体变换方法：ElasticTransform、GridDistortion 和 OpticalDistortion。 |
+| [GridDropout](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.GridDropout) |         [查看结果](#GridDropout)         |                 以网格方式删除图像的矩形区域                 |
+| [HorizontalFlip](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.HorizontalFlip) |       [查看结果](#HorizontalFlip)        |                           水平翻转                           |
+| [IAAAffine](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAAffine) |          [查看结果](#IAAAffine)          | 在输入上放置规则的点网格，并通过仿射变换在这些点的附近随机移动 |
+| [IAACropAndPad](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAACropAndPad) |        [查看结果](#IAACropAndPad)        |                          剪裁和填充                          |
+| [IAAFliplr](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAFliplr) |          [查看结果](#IAAFliplr)          |                           左右翻转                           |
+| [IAAFlipud](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAFlipud) |          [查看结果](#IAAFlipud)          |                           上下翻转                           |
+| [IAAPerspective](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAPerspective) |       [查看结果](#IAAPerspective)        |                  对输入执行随机四点透视变换                  |
+| [IAAPiecewiseAffine](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAPiecewiseAffine) |     [查看结果](#IAAPiecewiseAffine)      | 在输入端放置一个规则的点网格，并通过仿射变换随机移动这些点的邻域 |
+| [Lambda](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Lambda) |           [查看结果](#Lambda)            |                      用户自定义图像增强                      |
+| [LongestMaxSize](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.LongestMaxSize) |       [查看结果](#LongestMaxSize)        | 如果图像最长边小于max_size, 将最长变为max_size, 并保留长宽比resize |
+| [MaskDropout](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.MaskDropout) |         [查看结果](#MaskDropout)         |                                                              |
+| [OpticalDistortion](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.OpticalDistortion) |      [查看结果](#OpticalDistortion)      |                             畸变                             |
+| [PadIfNeeded](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.PadIfNeeded) |         [查看结果](#PadIfNeeded)         |                           判断填充                           |
+| [RandomCrop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomCrop) |         [查看结果](#RandomCrop)          |                           随机剪裁                           |
+| [RandomCropNearBBox](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomCropNearBBox) |     [查看结果](#RandomCropNearBBox)      |                                                              |
+| [RandomGridShuffle](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomGridShuffle) |      [查看结果](#RandomGridShuffle)      |                         网格打乱图像                         |
+| [RandomResizedCrop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomResizedCrop) |      [查看结果](#RandomResizedCrop)      |                         剪裁并resize                         |
+| [RandomRotate90](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomRotate90) |       [查看结果](#RandomRotate90)        |                         随机旋转90度                         |
+| [RandomScale](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomScale) |         [查看结果](#RandomScale)         |                         随机尺度变换                         |
+| [RandomSizedBBoxSafeCrop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomSizedBBoxSafeCrop) |   [查看结果](#RandomSizedBBoxSafeCrop)   |                                                              |
+| [RandomSizedCrop](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomSizedCrop) |       [查看结果](#RandomSizedCrop)       |                           随机剪裁                           |
+| [Resize](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Resize) |           [查看结果](#Resize)            |                       重新调整图像大小                       |
+| [Rotate](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Rotate) |           [查看结果](#Rotate)            |                             旋转                             |
+| [ShiftScaleRotate](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.ShiftScaleRotate) |      [查看结果](#ShiftScaleRotate)       |                     平移、尺度加旋转变换                     |
+| [SmallestMaxSize](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.SmallestMaxSize) |       [查看结果](#SmallestMaxSize)       |               将短边变为maxsize， 并保持长宽比               |
+| [Transpose](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Transpose) |          [查看结果](#Transpose)          |                             转置                             |
+| [VerticalFlip](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.VerticalFlip) |        [查看结果](#VerticalFlip)         |                           垂直翻转                           |
+| [GaussNoise](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.GaussNoise) |            [查看结果](#gauss)            |                           高斯噪声                           |
+| [IAAAdditiveGaussianNoise](https://albumentations.readthedocs.io/en/latest/api/imgaug.html#albumentations.imgaug.transforms.IAAAdditiveGaussianNoise) | [查看结果](#iaa_additive_gaussian_noise) |                           高斯噪声                           |
+| [ISONoise](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.ISONoise) |          [查看结果](#isonoise)           |                        相机传感器噪音                        |
+| [RandomFog](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomFog) |         [查看结果](#random_fog)          |                             雾化                             |
+| [RandomSnow](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomSnow) |         [查看结果](#random_snow)         |                    漂白一些模拟雪的像素值                    |
+| [RandomRain](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomRain) |         [查看结果](#random_rain)         |                         增加雨的影响                         |
+| [RandomBrightness](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomBrightness) |      [查看结果](#random_brightness)      |                    随机改变输入图像的亮度                    |
+| [RandomBrightnessContrast](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomBrightnessContrast) | [查看结果](#random_brightness_contrast)  |                随机改变输入图像的亮度和对比度                |
+| [RandomGamma](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomGamma) |        [查看结果](#random_gamma)         |                          调整Gamma                           |
+| [RandomSunFlare](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomSunFlare) |      [查看结果](#random_sun_flare)       |                         模拟太阳耀斑                         |
+| [RandomShadow](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomShadow) |        [查看结果](#random_shadow)        |                        模拟图像的阴影                        |
+|                                                              |              [查看结果](#)               |                                                              |
 
 ***工具函数***
 
@@ -520,13 +531,184 @@ aug_show(img, albu.RandomResizedCrop(height=240, width=320, scale=(0.3, 1.0), ra
 
 [回到顶部](#top)
 
-
 <a id = 'VerticalFlip'></a>
 
 
 ## 34. VerticalFlip
 
 ![](https://img2020.cnblogs.com/blog/1564250/202004/1564250-20200416220148873-1382587554.png)
+
+[回到顶部](#top)
+
+
+
+<a id = 'gauss'></a>
+
+## 35. GaussNoise
+
+
+
+![](./pics/gauss.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = 'iaa_additive_gaussian_noise'></a>
+
+## 36. IAAAdditiveGaussianNoise
+
+
+
+![](./pics/iaa_additive_gaussian_noise.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = 'isonoise'></a>
+
+## 37. ISONoise
+
+
+
+![](./pics/isonoise.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = 'random_fog'></a>
+
+## 38. RandomFog
+
+
+
+![](./pics/random_fog.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = 'random_snow'></a>
+
+## 39. RandomSnow
+
+
+
+![](./pics/random_snow.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = 'random_rain'></a>
+
+## 40. RandomRain
+
+
+
+![](./pics/random_rain.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = 'random_brightness'></a>
+
+## 41. RandomBrightness
+
+
+
+![](./pics/random_brightness.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = 'random_brightness_contrast'></a>
+
+## 42. RandomBrightnessContrast
+
+
+
+![](./pics/random_brightness_contrast.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = 'random_gamma'></a>
+
+## 43. RandomGamma
+
+
+
+![](./pics/random_gamma.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = 'random_sun_flare'></a>
+
+## 44. RandomSunFlare
+
+
+
+![](./pics/random_sun_flare.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = 'random_shadow'></a>
+
+## 45. RandomShadow
+
+![](./pics/random_shadow.png)
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = ''></a>
+
+## 46. 
+
+
+
+[回到顶部](#top)
+
+
+
+<a id = ''></a>
+
+## 47. 
+
+
 
 [回到顶部](#top)
 
