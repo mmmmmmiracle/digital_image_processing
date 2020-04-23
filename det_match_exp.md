@@ -84,7 +84,15 @@
 
 ![](./pics/pcb_2.png)
 
-### 2.4 mnist
+### 2.4 多机数据
+
+拍摄机器： oppo手机(1080 * 1440)， 一加手机(1080, 2160)
+
+![](F:\git_repo\digital_image_processing\pics\book_sift_align.png)
+
+![](F:\git_repo\digital_image_processing\pics\book_sift_match.png)
+
+### 2.5 mnist
 
 ***数据增强方式：平移 + 缩放 + 旋转 + 雾化 + 阴影 + 高斯噪声***
 
