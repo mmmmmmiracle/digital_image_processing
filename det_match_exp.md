@@ -88,9 +88,9 @@
 
 拍摄机器： oppo手机(1080 * 1440)， 一加手机(1080, 2160)
 
-![](F:\git_repo\digital_image_processing\pics\book_sift_align.png)
+![book_sift_align](F:\git_repo\digital_image_processing\pics\book_sift_align.png)
 
-![](F:\git_repo\digital_image_processing\pics\book_sift_match.png)
+![book_sift_match](F:\git_repo\digital_image_processing\pics\book_sift_match.png)
 
 ### 2.5 mnist
 
